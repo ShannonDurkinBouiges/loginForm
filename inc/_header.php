@@ -26,7 +26,7 @@
                     <input type="password" name="password" placeholder="Password">
                     <button type="submit" name="loginButton">Login</button>
                 </form>
-                <a href="signup.php">Sign Up</a>
+                <a href="signup.php">Signup</a>
                 <form action="inc/logout.php" method="POST">
                     <button type="submit" name="logoutButton">Logout</button>
                 </form>
