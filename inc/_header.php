@@ -20,5 +20,16 @@
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <div>
+                <form action="inc/login.php" method="POST">
+                    <input type="text" name="emailID" placeholder="Username/E-mail...">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit" name="loginButton">Login</button>
+                </form>
+                <a href="signup.php">Sign Up</a>
+                <form action="inc/logout.php" method="POST">
+                    <button type="submit" name="logoutButton">Logout</button>
+                </form>
+            </div>
         </nav>
     </header>
