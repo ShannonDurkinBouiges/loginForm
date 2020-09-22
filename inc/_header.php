@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,15 +25,20 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <div>
-                <form action="inc/login.php" method="POST">
-                    <input type="text" name="emailID" placeholder="Username/E-mail...">
-                    <input type="password" name="password" placeholder="Password">
-                    <button type="submit" name="loginButton">Login</button>
-                </form>
-                <a href="signup.php">Signup</a>
-                <form action="inc/logout.php" method="POST">
-                    <button type="submit" name="logoutButton">Logout</button>
-                </form>
+                <?php
+                    if (isset($_SESSION['emailID'])) {
+                        echo '<form action="inc/logout.php" method="POST">
+                                <button type="submit" name="logoutButton">Logout</button>
+                              </form>';
+                    }  else {
+                        echo '<form action="inc/_login.php" method="POST">
+                                <input type="text" name="emailID" placeholder="Username/E-mail...">
+                                <input type="password" name="password" placeholder="Password">
+                                <button type="submit" name="loginButton">Login</button>
+                              </form>
+                              <a href="signup.php">Signup</a>';
+                    }
+                ?>
             </div>
         </nav>
     </header>
